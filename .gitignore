@@ -1,3 +1,5 @@
 /.idea
 /mysql-data/
 /mysql-data/!.gitkeep
+/www/
+/www/!.gitkeep

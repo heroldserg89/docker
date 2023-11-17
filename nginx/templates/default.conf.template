@@ -3,6 +3,7 @@ server {
     server_name localhost;
     index index.php
     root /var/www/public_html;
+    client_max_body_size 0;
     location ~ \.php$ {
         try_files $uri =404;
         fastcgi_pass php_${NAME_PROJECT}:9000;
