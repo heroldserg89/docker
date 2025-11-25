@@ -25,6 +25,7 @@ services:
     volumes:
       - ./www:/etc/nginx/html
       - ./images/php/php.ini:/usr/local/etc/php/conf.d/defaults.ini
+      - ./images/php/phpcs.xml:/etc/nginx/html/phpcs.xml
     networks:
       - network
     depends_on:

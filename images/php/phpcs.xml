@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ProjectRules">
+    <description>Project coding standard with camelCase enforcement</description>
+
+    <!-- Используем стандарт PSR-12 как основу -->
+    <rule ref="PSR12"/>
+    <rule ref="PSR1"/>
+
+    <!-- Добавляем проверку переменных на camelCase (например: $myVariable) -->
+    <rule ref="Squiz.NamingConventions.ValidVariableName"/>
+
+    <!-- Проверка имен обычных функций на camelCase -->
+    <rule ref="Generic.NamingConventions.CamelCapsFunctionName"/>
+
+    <!-- Проверка имен методов на camelCase (обычно включена в PSR-1/PSR-12, но можно усилить) -->
+    <rule ref="PSR1.Methods.CamelCapsMethodName"/>
+
+    <!-- Проверяем файлы в текущей директории -->
+    <file>.</file>
+
+    <!-- Исключаем папку vendor и node_modules -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    
+    <!-- Устанавливаем расширения файлов для проверки -->
+    <arg name="extensions" value="php"/>
+</ruleset>
