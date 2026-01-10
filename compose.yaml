@@ -25,7 +25,8 @@ services:
     volumes:
       - ./www:/etc/nginx/html
       - ./images/php/php.ini:/usr/local/etc/php/conf.d/defaults.ini
-      - ./images/php/phpcs.xml:/etc/nginx/html/phpcs.xml
+      - ./images/php/phpcs.xml:/usr/local/etc/phpcs.xml
+      - ./logs:/var/log/php
     networks:
       - network
     depends_on:
@@ -34,7 +35,7 @@ services:
     container_name: mysql_${NAME_PROJECT}
     image: mysql
     ports:
-      - 3316:3306
+      - 3306:3306
     volumes:
       - ./mysql-data:/var/lib/mysql
     environment:
