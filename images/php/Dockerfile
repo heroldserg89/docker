@@ -16,5 +16,5 @@ RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && \
     chmod +x phpcs.phar phpcbf.phar && \
     mv phpcs.phar /usr/local/bin/phpcs && \
     mv phpcbf.phar /usr/local/bin/phpcbf
-
+RUN mkdir -p /var/log/php && chown -R www-data:www-data /var/log/php
 ENTRYPOINT ["php-fpm"]
