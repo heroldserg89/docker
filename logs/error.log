@@ -1,33 +1,7 @@
-[23-Jan-2026 07:16:36 UTC] Test from PHP CLI
-[23-Jan-2026 07:20:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function connectD() in /etc/nginx/html/sign-up.php:11
+[31-Jan-2026 04:11:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'yeticave.categori' doesn't exist in /etc/nginx/html/functions/db.php:74
 Stack trace:
-#0 {main}
-  thrown in /etc/nginx/html/sign-up.php on line 11
-[23-Jan-2026 07:34:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function include_template() in /etc/nginx/html/login.php:65
-Stack trace:
-#0 {main}
-  thrown in /etc/nginx/html/login.php on line 65
-[23-Jan-2026 07:35:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function include_template() in /etc/nginx/html/login.php:65
-Stack trace:
-#0 {main}
-  thrown in /etc/nginx/html/login.php on line 65
-[23-Jan-2026 07:35:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function include_template() in /etc/nginx/html/login.php:65
-Stack trace:
-#0 {main}
-  thrown in /etc/nginx/html/login.php on line 65
-[23-Jan-2026 07:35:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function include_template() in /etc/nginx/html/login.php:65
-Stack trace:
-#0 {main}
-  thrown in /etc/nginx/html/login.php on line 65
-[23-Jan-2026 07:38:17 UTC] PHP Warning:  Trying to access array offset on null in /etc/nginx/html/login.php on line 52
-[23-Jan-2026 07:38:17 UTC] PHP Deprecated:  password_verify(): Passing null to parameter #2 ($hash) of type string is deprecated in /etc/nginx/html/login.php on line 52
-[23-Jan-2026 07:39:13 UTC] PHP Warning:  Trying to access array offset on null in /etc/nginx/html/login.php on line 53
-[23-Jan-2026 07:39:13 UTC] PHP Deprecated:  password_verify(): Passing null to parameter #2 ($hash) of type string is deprecated in /etc/nginx/html/login.php on line 53
-[23-Jan-2026 07:41:43 UTC] PHP Warning:  Trying to access array offset on null in /etc/nginx/html/login.php on line 53
-[23-Jan-2026 07:41:43 UTC] PHP Deprecated:  password_verify(): Passing null to parameter #2 ($hash) of type string is deprecated in /etc/nginx/html/login.php on line 53
-[23-Jan-2026 07:42:05 UTC] PHP Warning:  Trying to access array offset on null in /etc/nginx/html/login.php on line 53
-[23-Jan-2026 07:42:05 UTC] PHP Deprecated:  password_verify(): Passing null to parameter #2 ($hash) of type string is deprecated in /etc/nginx/html/login.php on line 53
-[23-Jan-2026 07:42:30 UTC] PHP Warning:  Trying to access array offset on null in /etc/nginx/html/login.php on line 54
-[23-Jan-2026 07:42:30 UTC] PHP Deprecated:  password_verify(): Passing null to parameter #2 ($hash) of type string is deprecated in /etc/nginx/html/login.php on line 54
-[23-Jan-2026 08:06:25 UTC] Unknown column 'contact' in 'field list'
-[23-Jan-2026 08:23:46 UTC] PHP Warning:  Undefined variable $email in /etc/nginx/html/login.php on line 47
+#0 /etc/nginx/html/functions/db.php(74): mysqli_query(Object(mysqli), 'SELECT * FROM c...')
+#1 /etc/nginx/html/init.php(21): getCategories(Object(mysqli))
+#2 /etc/nginx/html/search.php(9): include_once('/etc/nginx/html...')
+#3 {main}
+  thrown in /etc/nginx/html/functions/db.php on line 74
