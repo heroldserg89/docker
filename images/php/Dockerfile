@@ -11,8 +11,10 @@ RUN apt-get update && apt-get install -y \
     vim \
     unzip
 
-RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && \
-    curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar && \
+ARG PHPCS_VERSION=4.0.1
+
+RUN curl -OL https://github.com/PHPCSStandards/PHP_CodeSniffer/releases/download/${PHPCS_VERSION}/phpcs.phar&& \
+    curl -OL https://github.com/PHPCSStandards/PHP_CodeSniffer/releases/download/${PHPCS_VERSION}/phpcbf.phar && \
     chmod +x phpcs.phar phpcbf.phar && \
     mv phpcs.phar /usr/local/bin/phpcs && \
     mv phpcbf.phar /usr/local/bin/phpcbf
